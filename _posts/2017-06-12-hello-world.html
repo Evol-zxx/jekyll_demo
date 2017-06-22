@@ -1,0 +1,28 @@
+---
+layout: default
+title: github-page搭建
+---
+<h2>{{ page.title }}</h2>
+<ul>
+    <li>新建一个项目目录：mkdir jekyll_demo</li>
+    <li>进入根目录：cd jekyll_demo</li>
+    <li>初始化项目：git init</li>
+    <li>创建一个gh-pages分支，必须在此分支上改动提交代码：git checkout --orphan gh-pages</li>
+    <li>在根目录下新建一个_config.yml文件: 在任意编辑器上完成即可</li>
+    <li>新建一个_layouts文件夹：mkdir _layouts</li>
+    <li>进入_layouts目录，新建一个default.html文件</li>
+    <li>新建一个_posts目录：mkdir _posts</li>
+    <li>进入_posts目录，新建一个2017-06-12-hello-world.html文件（注意：一定要是 年-月-日-名称.html 格式）</li>
+    <li>添加好内容之后执行:
+        <ol>
+            <li>git add .</li>
+            <li>git commit -m "fist post"</li>
+            <li>git remote add origin https://github.com/Evol-zxx/jekyll_demo.git (此处路径是从github上获取得，因此在进行这一步之前 要先在github上建一个和项目名相同的仓库 jekyll_demo)</li>
+            <li>git push origin gh-pages</li>
+        </ol>
+    </li>
+    <li>
+        等10分钟左右，即可在http://username.github.com/jekyll_demo/ &&&  http://username.github.io/jekyll_demo/打开看到新建的博客页面
+    </li>
+</ul>
+<p>{{ page.date | date_to_string }}</p>
